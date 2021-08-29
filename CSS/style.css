@@ -1,0 +1,549 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body{
+    font-family:'Hind', sans-serif;
+    font-size: 14px;
+}
+
+    /* header */
+    header {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 10;
+        transform: translatex(-50%);
+    }
+
+    header .navbar-toggler{
+        background-color: #35a22c;
+    }
+    header .navbar-brand span{
+        font-size: 36px;    
+    }
+    header .navbar-brand i{
+        font-size: 45px;
+        color: #35a22c;    
+    }
+    header .navbar-nav .nav-item {
+        margin: 0 10px;
+    }
+
+    header .navbar-nav .nav-item .nav-link {
+        color: white;
+        font-size: 1.2rem;
+        transition: all 0.5s;
+    }
+    header .navbar-nav .nav-item:hover .nav-link{
+        color: #35a22c ; 
+    }
+    header .navbar-nav .nav-item.active .nav-link{
+        color: #35a22c;    
+    }
+    header .navbar-nav .nav-item::after{
+       content: "";
+       width: 0;
+       display: block;
+       height: 2px;
+       background-color:#35a22c ;
+       transition: all 0.5s;
+    }
+    header .navbar-nav .nav-item.active::after{
+        width: 100%;
+       
+    }
+     header .navbar-nav .nav-item:hover::after{
+         width: 100%;
+    }
+
+    @media screen and (max-width: 576px) {
+        header .navbar-brand span{
+            font-size: 1.5rem;}
+        header .navbar-brand i {
+            font-size: 2.5rem;
+        }        
+       }
+      /* Carousel */
+    #carousel .overlay{
+        background-color: rgb(39,43,54,0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #carousel .carousel-item{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+    #carousel .carousel-item:nth-child(1){
+        background-image: url(./../image/finland.jpg);
+    }     
+    #carousel .carousel-item:nth-child(2){
+        background-image: url(./../image/mountains-1.jpg); 
+    }      
+    #carousel .carousel-item:nth-child(3){
+        background-image: url(./../image/mountains.jpg); 
+    } 
+
+    #carousel .carousel__thumb{
+        width: 140px;
+        border-radius: 50%;
+        backdrop-filter: blur(3px);
+        padding:10px;
+        margin: auto;
+    }
+
+    #carousel .carousel__thumb img{
+        width: 100%;
+        border-radius: 50%;
+        border: 7px solid rgb(255,255,255,0.25);
+    } 
+    #carousel .carousel__content h1{
+        font-size: 4.0rem;
+       
+    }
+    #carouse .carousel__content p{
+        font-size: 1.5rem;
+        font-weight: 600;
+        
+    }
+    #carousel .carousel__content{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    #carousel .carousel-indicators li {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        border: none;
+        
+    }
+    #carousel .carousel-indicators li.active{
+        background-color: #35a22c;
+    }
+    #carousel .carousel-indicator{
+        bottom: 10%;
+    }
+
+    /* welcome */
+    #welcome{
+        position: relative;
+    }
+    #welcome .bg__overlay{
+        background-image: url(./../image/memphis_2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+    }
+
+    #welcome .progress{
+        height: 0.3rem;
+    }
+    .aos-animate .progress-bar{
+        background: linear-gradient(to right,#35a22c, #0ea8cf) ;
+        animation-name: progress;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+
+    } 
+    /* #welcome .welcome__content.aos-animate .progress-bar {
+        animation: progress 1.5s ease-in-out forwards;
+    } */
+
+    #welcome .welcome__heading h1{
+        font-size: 2.5rem;
+        line-height: 42px;
+        color: #1a1d2d;
+        font-weight: 600;
+
+    }
+    #welcome h4 {
+        font-size: 1rem;
+        line-height: 30px;
+        font-weight: 700;
+        color: #1a1d2d;
+        margin-bottom: 10px;
+    }
+
+    @keyframes progress{
+        from{
+            width: 0;
+        }
+        to{
+            width: 100%;
+        }
+    }
+
+    /* Feature */
+    #feature {
+        background-image: url(./../image/3.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 100px 0 120px;
+        background-attachment: fixed;
+        position: relative;
+    }
+
+    #feature .feature__overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(7,10,12,.72);
+       
+    }
+    #feature .feature__heading{
+        position: relative;
+    }
+
+    #feature .feature__heading h1{
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        font-weight: 600;
+    }
+    #feature .feature__heading p{
+        font-size: 1.2rem;
+    }
+
+    #feature .feature__item{
+        padding: 40px 40px;
+        background-color: rgba(255,255,255,.1) ;
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 10px;
+        backdrop-filter: blur(3px);
+        transition: all 0.5s;
+    }
+    #feature .feature__item:hover{
+        background-color: black;
+        border-color: white;
+    }
+
+
+    #feature .feature__item i{
+        font-size: 4rem;
+        color:#35a22c ;
+        font-weight: bold;
+    }
+    #feature .feature__item h4{
+        font: 1.2rem;
+        color: white;
+        padding-top: 30px;
+        font-weight: 800;
+
+    }
+    #feature .feature__item p{
+        font-size: 1rem;
+        padding-top: 15px;
+        color: white;
+
+    }
+
+    /* project */
+    #project .nav-pills .nav-link.active,
+    #project .nav-pills .show > .nav-link{
+        background-color: #35a22c;
+        color: white;
+        border-color: #35a22c;
+    }
+
+    #project .nav-pills .nav-link{
+        color: #1a1d2d;
+        border: 1px solid #1a1d2d;
+        margin: 0 5px;
+    }
+
+   
+    #project .project__item{
+        margin-top: 2.2rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 0 0.4rem rgba(0,0,0,0.13);
+        border:none;
+        cursor:pointer;
+    }
+    #project .project__item p{
+        color: #585858;
+    }
+
+    #project .project__item .card-body{
+        border: 1px solid transparent;
+        border-radius: 0 0 1rem 1rem;
+        transition: all .5s;
+    }
+    #project .project__item .card{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border-radius: .25rem;
+    }
+    #project .project__item:hover .card-body{
+        border-color: #35a22c;
+        border-top-color: transparent;
+    }
+    #project .project__item:hover h4{
+        color:#35a22c;
+    }
+
+    /* Edu */
+    .edu{
+        background: #272b36 url(../image/memphis_2.png) no-repeat top right;
+        background-size: cover;
+    }
+    .edu__content{
+        background: rgb(255,255,255,0.25);
+        border-radius: 10px;
+        border: 1px solid rgb(255,255,255,0.18);
+        backdrop-filter: blur(3px);
+        box-shadow: 0px 0px 30px 0px rgba(207, 160, 160, 0.3);
+        padding: 45px;
+    }
+    .edu__content h3{
+        font-size: 36px;
+        color: #fff;
+        font-weight: 700;
+        line-height: 42px;
+    }
+    .edu__content h5{
+        padding: 6px 10px 5px 10px;
+        border: 2px solid #35a22c;
+        color: #fff;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 700;
+        display: inline-block;
+
+    }
+    .edu__content h4{
+        font-size: 20px;
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .edu__content p{
+        line-height: 24px;
+        color: #585858;
+        opacity: 0.7;
+    }
+
+    /* Award */
+    .award{
+        position: relative;
+        color: #585858;
+        padding: 70px 0;
+    }
+    .award__bg{
+        background-image: url(../image/memphis_3.png);
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: 50% auto;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+    }
+    .award__left{
+        background: rgba(255,255,255,0.25);
+        border-radius: 10px;
+        border: 1px solid rgb(255,255,255,0.18);
+        backdrop-filter: blur(3px);
+        box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.3);
+        padding: 45px;
+    }
+
+    .award__left h2{
+        font-size: 36px;
+        line-height: 42px;
+        color: #1a1d2d;
+        font-weight: 600; 
+    }
+    .award__left .heading p{
+        color: #585858;
+        line-height: 24px;
+    }
+    .award__right{
+        padding: 45px 0;
+    }
+    .award__right p{
+        margin-top: 0;
+        margin-bottom: 1rem; 
+    }
+
+    .award__right .img-fuild{
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Footer */
+    footer{
+        background: #222222;
+
+    }
+    footer a{
+        color: #aaa;
+
+    }
+    footer p{
+        color: #aaa;
+        margin: 0;
+    }
+    footer a:hover{
+        text-decoration: none;
+        color: #35a22c;
+    }
+    .footer__main i{
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        border-radius: 50%;
+        border: 1px solid #454545;
+        transition: all .5s;
+    }
+    .footer__main i:hover{
+        border-color: #35a22c;
+    }
+    .footer__main a{
+        margin-right: 10px;
+
+    }
+    .footer__main a:last-child {
+        margin-right: 0;
+    }
+
+    .footer__copies {
+        border-top: 1px solid #454545;
+        padding-top: 30px;
+        margin-top: 30px;
+    }
+    footer p {
+        color: #aaa;
+        margin: 0;
+    }
+
+    /* responsive */
+
+    /* header */
+    header .navbar-toggler{
+        background-color: #35a22c;
+    }
+    header .navbar-toggler:hover{
+        background-color: #0ea8cf;
+    }
+    @media screen and (max-width:991.98px){
+        header .navbar-collapser{
+            background-color: white;
+        }
+        #navbarPort .nav-item{
+            margin: 0;
+            padding: 0 10px;
+        }
+        #navbarPort .nav-item:hover{
+            background-color: #35a22c;
+        }
+        #navbarPort .nav-item .nav-link{
+            color: #35a22c;
+        }
+        #navbarPort .nav-item:hover .nav-link{
+            color: #fff;
+        }
+        #navbarPort .nav-item:hover::after, #navbarPort .nav-item.active::after{
+            width: 0;
+        }
+
+    }
+
+    @media screen and (max-width:376px){
+        header .navbar-brand i{
+            font-size: 8vw;
+        }
+        header .navbar-brand {
+            font-size: 7vw;
+        }
+    }
+
+    /* carousel */
+    .carousel-item{
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-style: cover;
+    }
+    .carousel-item:nth-child(1){
+        background-image: url(../image/finland.jpg);
+    }
+    .carousel-item:nth-child(2){
+        background-image: url(../image/mountains.jpg);
+    }
+    .carousel-item:nth-child(3){
+        background-image: url(../image/mountains-1.jpg);
+    }
+
+    @media screen and (max-width:415px){
+        .carousel__thumb{
+            width: 100px;
+        }
+        #carousel .carousel-caption h1{
+            font-size: 5vw;
+            line-height: 5vw;
+        }
+        #carousel .carousel-caption p{
+            font-size: 3vw;
+        }
+        .carousel-caption{
+            padding-top: 0;
+        }
+    }
+    @media screen and (max-width:320px){
+        .carousel__thumb{
+            width: 120px;
+        }
+        #carousel .carousel-caption h1{
+            font-size: 10vw;
+            line-height: 10vw;
+        }
+        #carousel .carousel-caption p{
+            font-size: 5vw;
+        }
+        .carousel-caption{
+            padding-top: 0;
+        }
+    }
+
+    /* Project */
+    @media screen and (max-width:575.98px){
+        .project__content .nav .nav-link{
+            padding: .5rem;
+        }
+        .bg__overlay{
+            background-position: right top;
+        }
+    }
+    @media screen and (max-width:415px){
+        .project__content .nav .nav-item{
+            margin-bottom: 1rem;;
+        }
+        
+    }
